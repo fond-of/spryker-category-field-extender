@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="zed"
+        xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+        namespace="Orm\Zed\Category\Persistence"
+        package="src.Orm.Zed.Category.Persistence">
+
+    <table name="spy_category" idMethod="native" phpName="SpyCategory">
+            <column name="content_type" required="false" type="VARCHAR" size="255"/>
+            <column name="contentful_hero" required="false" type="VARCHAR" size="255"/>
+            <column name="contentful_filter" required="false" type="VARCHAR" size="255"/>
+            <column name="contentful_content_collection" required="false" type="VARCHAR" size="255"/>
+    </table>
+</database>
