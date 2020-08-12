@@ -6,9 +6,6 @@ use Spryker\Zed\Kernel\Communication\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-/**
- * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
- */
 class CategoryContentTypeType extends AbstractType
 {
     public const FIELD_CONTENT_TYPE = 'content_type';

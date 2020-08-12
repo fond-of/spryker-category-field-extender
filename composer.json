@@ -12,10 +12,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1",
-        "spryker/glossary": "^3.0.0",
-        "spryker/kernel": "^3.0.0",
-        "spryker/zed-request": "^3.0.0",
-        "guzzlehttp/guzzle": "~6.2"
+        "spryker/category": "^4.16"
     },
     "require-dev": {
         "spryker/code-sniffer": "^0.11",
