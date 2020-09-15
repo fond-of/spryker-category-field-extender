@@ -4,10 +4,10 @@ namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin;
 
 use Codeception\Test\Unit;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory;
-use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulFilterType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\AltTitleType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ContentfulFilterTypePluginTest extends Unit
+class AltTitleTypeFormPluginTest extends Unit
 {
     /**
      * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory|\PHPUnit\Framework\MockObject\MockObject
@@ -15,7 +15,7 @@ class ContentfulFilterTypePluginTest extends Unit
     protected $communicationFactoryMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\ContentfulFilterTypePlugin
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\AltTitleTypeFormPlugin
      */
     protected $plugin;
 
@@ -25,9 +25,9 @@ class ContentfulFilterTypePluginTest extends Unit
     protected $formBuilderMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTypeType|\PHPUnit\Framework\MockObject\MockObject
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\AltTitleType|\PHPUnit\Framework\MockObject\MockObject
      */
-    protected $categoryContentTypeTypeMock;
+    protected $categoryAltTypeMock;
 
     /**
      * @return void
@@ -44,11 +44,11 @@ class ContentfulFilterTypePluginTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->categoryContentTypeTypeMock = $this->getMockBuilder(ContentfulFilterType::class)
+        $this->categoryAltTypeMock = $this->getMockBuilder(AltTitleType::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->plugin = new ContentfulFilterTypePlugin();
+        $this->plugin = new AltTitleTypeFormPlugin();
         $this->plugin->setFactory($this->communicationFactoryMock);
     }
 
@@ -58,10 +58,10 @@ class ContentfulFilterTypePluginTest extends Unit
     public function testBuildFormSuccess()
     {
         $this->communicationFactoryMock->expects($this->once())
-            ->method('createContentfulFilterType')
-            ->willReturn($this->categoryContentTypeTypeMock);
+            ->method('createAltTitle')
+            ->willReturn($this->categoryAltTypeMock);
 
-        $this->categoryContentTypeTypeMock->expects($this->once())
+        $this->categoryAltTypeMock->expects($this->once())
             ->method('buildForm')
             ->with($this->formBuilderMock, []);
 

@@ -2,6 +2,7 @@
 
 namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication;
 
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\AltTitleType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTypeType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulContentCollectionType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulFilterType;
@@ -41,5 +42,13 @@ class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFac
     public function createContentfulContentCollectionType(): AbstractType
     {
         return new ContentfulContentCollectionType();
+    }
+
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createAltTitle(): AbstractType
+    {
+        return new AltTitleType();
     }
 }

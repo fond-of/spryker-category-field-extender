@@ -9,9 +9,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class CategoryContentTypeType extends AbstractType
+class AltTitleType extends AbstractType
 {
-    public const FIELD_CONTENT_TYPE = 'content_type';
+    public const FIELD_ALT_TITLE = 'alt_title';
 
     /**
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
@@ -21,7 +21,7 @@ class CategoryContentTypeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->addContentType($builder, $options);
+        $this->addAltTitle($builder, $options);
     }
 
     /**
@@ -30,9 +30,9 @@ class CategoryContentTypeType extends AbstractType
      *
      * @return $this
      */
-    protected function addContentType(FormBuilderInterface $builder, array $options)
+    protected function addAltTitle(FormBuilderInterface $builder, array $options)
     {
-        $builder->add(static::FIELD_CONTENT_TYPE, TextType::class, [
+        $builder->add(static::FIELD_ALT_TITLE, TextType::class, [
             'required' => false,
         ]);
 
