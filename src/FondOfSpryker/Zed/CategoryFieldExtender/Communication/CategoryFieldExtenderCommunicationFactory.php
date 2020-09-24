@@ -54,7 +54,7 @@ class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFac
     }
 
     /**
-     * @return \Symfony\Component\Form\AbstractType
+     * @return AbstractType
      */
     public function createLocalizedAttributesCollectionType(): AbstractType
     {

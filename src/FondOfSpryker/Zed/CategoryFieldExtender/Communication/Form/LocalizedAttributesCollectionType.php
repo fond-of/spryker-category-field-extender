@@ -19,7 +19,7 @@ class LocalizedAttributesCollectionType  extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->addLocalizedAttributeAltTitle($builder);
+        $this->addLocalizedAttributeAltTitle($builder, $options);
     }
 
     /**

@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class LocalizedAttributesCollectionTypeFormPlugin extends AbstractPlugin implements CategoryFormPluginInterface
+class LocalizedAttributesCollectionTypeFormPlugin  extends AbstractPlugin implements CategoryFormPluginInterface
 {
     /**
      * Specification:
