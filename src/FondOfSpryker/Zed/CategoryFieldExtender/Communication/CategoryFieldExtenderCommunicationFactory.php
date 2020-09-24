@@ -7,6 +7,7 @@ use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTy
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulContentCollectionType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulFilterType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulHeroType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\LocalizedAttributesCollectionType;
 use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 use Symfony\Component\Form\AbstractType;
 
@@ -50,5 +51,13 @@ class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFac
     public function createAltTitle(): AbstractType
     {
         return new AltTitleType();
+    }
+
+    /**
+     * @return AbstractType
+     */
+    public function createLocalizedAttributesCollectionType(): AbstractType
+    {
+        return new LocalizedAttributesCollectionType();
     }
 }

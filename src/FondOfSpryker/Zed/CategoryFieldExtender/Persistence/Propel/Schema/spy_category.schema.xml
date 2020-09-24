@@ -7,10 +7,14 @@
         package="src.Orm.Zed.Category.Persistence">
 
     <table name="spy_category" idMethod="native" phpName="SpyCategory">
-            <column name="content_type" required="false" type="VARCHAR" size="255"/>
-            <column name="contentful_hero" required="false" type="VARCHAR" size="255"/>
-            <column name="contentful_filter" required="false" type="VARCHAR" size="255"/>
-            <column name="contentful_content_collection" required="false" type="VARCHAR" size="255"/>
-            <column name="alt_title" required="false" type="VARCHAR" size="255"/>
+        <column name="content_type" required="false" type="VARCHAR" size="255"/>
+        <column name="contentful_hero" required="false" type="VARCHAR" size="255"/>
+        <column name="contentful_filter" required="false" type="VARCHAR" size="255"/>
+        <column name="contentful_content_collection" required="false" type="VARCHAR" size="255"/>
+
+    </table>
+
+    <table name="spy_category_attribute" idMethod="native">
+        <column name="alt_title" required="false" type="VARCHAR" size="255"/>
     </table>
 </database>
