@@ -9,7 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Spryker\Zed\Category\Communication\Form\CategoryType;
 
-class LocalizedAttributesCollectionType  extends AbstractType
+class LocalizedAttributesCollectionType extends AbstractType
 {
     /**
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
