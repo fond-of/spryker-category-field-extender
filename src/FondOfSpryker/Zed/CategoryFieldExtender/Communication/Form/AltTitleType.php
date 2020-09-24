@@ -39,18 +39,4 @@ class AltTitleType extends AbstractType
 
         return $this;
     }
-
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return $this
-     */
-    protected function addLocalizedAttributesForm(FormBuilderInterface $builder)
-    {
-        $builder->add(static::FIELD_LOCALIZED_ATTRIBUTES, CollectionType::class, [
-            'entry_type' => CategoryLocalizedAttributeType::class,
-        ]);
-
-        return $this;
-    }
 }
