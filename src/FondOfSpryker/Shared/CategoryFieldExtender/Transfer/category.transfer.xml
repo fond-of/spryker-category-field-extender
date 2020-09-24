@@ -8,7 +8,6 @@
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
         <property name="contentfulContentCollection" type="string"/>
-        <property name="altTitle" type="string"/>
     </transfer>
 
     <transfer name="CategoryNodeStorage">
@@ -16,6 +15,9 @@
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
         <property name="contentfulContentCollection" type="string"/>
+    </transfer>
+
+    <transfer name="CategoryLocalizedAttributes">
         <property name="altTitle" type="string"/>
     </transfer>
 </transfers>
