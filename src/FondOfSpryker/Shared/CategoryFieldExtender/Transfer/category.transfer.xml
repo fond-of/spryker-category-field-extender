@@ -11,6 +11,7 @@
     </transfer>
 
     <transfer name="CategoryNodeStorage">
+        <property name="altTitle" type="string" />
         <property name="contentType" type="string" />
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
