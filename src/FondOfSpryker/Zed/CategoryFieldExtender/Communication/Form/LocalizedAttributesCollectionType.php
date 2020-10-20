@@ -1,14 +1,15 @@
 <?php
 
-
 namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form;
 
-use Spryker\Zed\Category\Communication\Form\CategoryLocalizedAttributeType;
+use Spryker\Zed\Category\Communication\Form\CategoryType;
 use Spryker\Zed\Kernel\Communication\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Spryker\Zed\Category\Communication\Form\CategoryType;
 
+/**
+ * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
+ */
 class LocalizedAttributesCollectionType extends AbstractType
 {
     /**

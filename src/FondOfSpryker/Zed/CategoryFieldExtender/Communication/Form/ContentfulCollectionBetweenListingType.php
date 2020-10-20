@@ -9,9 +9,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class AltTitleType extends AbstractType
+class ContentfulCollectionBetweenListingType extends AbstractType
 {
-    public const FIELD_ALT_TITLE = 'alt_title';
+    public const FIELD_CONTENTFUL_COLLECTION_BETWEEN_LISTING = 'contentful_collection_between_listing';
 
     /**
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
@@ -21,7 +21,7 @@ class AltTitleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->addAltTitle($builder, $options);
+        $this->addContentCollectionBetweenListing($builder, $options);
     }
 
     /**
@@ -30,24 +30,10 @@ class AltTitleType extends AbstractType
      *
      * @return $this
      */
-    protected function addAltTitle(FormBuilderInterface $builder, array $options)
+    protected function addContentCollectionBetweenListing(FormBuilderInterface $builder, array $options)
     {
-        $builder->add(static::FIELD_ALT_TITLE, TextType::class, [
+        $builder->add(static::FIELD_CONTENTFUL_COLLECTION_BETWEEN_LISTING, TextType::class, [
             'required' => false,
-        ]);
-
-        return $this;
-    }
-
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return $this
-     */
-    protected function addLocalizedAttributesForm(FormBuilderInterface $builder)
-    {
-        $builder->add(static::FIELD_LOCALIZED_ATTRIBUTES, CollectionType::class, [
-            'entry_type' => CategoryLocalizedAttributeType::class,
         ]);
 
         return $this;

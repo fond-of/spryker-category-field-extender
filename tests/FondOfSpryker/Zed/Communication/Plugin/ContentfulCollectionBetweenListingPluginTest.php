@@ -4,10 +4,10 @@ namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin;
 
 use Codeception\Test\Unit;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory;
-use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBeforeListingType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBetweenListingType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ContentfulContentCollectionTypePluginTest extends Unit
+class ContentfulCollectionBetweenListingPluginTest extends Unit
 {
     /**
      * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory|\PHPUnit\Framework\MockObject\MockObject
@@ -15,7 +15,7 @@ class ContentfulContentCollectionTypePluginTest extends Unit
     protected $communicationFactoryMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\ContentfulContentCollectionTypePlugin
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\ContentfulCollectionBetweenListingTypePlugin
      */
     protected $plugin;
 
@@ -25,9 +25,9 @@ class ContentfulContentCollectionTypePluginTest extends Unit
     protected $formBuilderMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTypeType|\PHPUnit\Framework\MockObject\MockObject
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBetweenListingType|\PHPUnit\Framework\MockObject\MockObject
      */
-    protected $categoryContentTypeTypeMock;
+    protected $contentfulCollectionBetweenListingType;
 
     /**
      * @return void
@@ -44,11 +44,11 @@ class ContentfulContentCollectionTypePluginTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->categoryContentTypeTypeMock = $this->getMockBuilder(ContentfulCollectionBeforeListingType::class)
+        $this->contentfulCollectionBetweenListingType = $this->getMockBuilder(ContentfulCollectionBetweenListingType::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->plugin = new ContentfulContentCollectionTypePlugin();
+        $this->plugin = new ContentfulCollectionBetweenListingTypePlugin();
         $this->plugin->setFactory($this->communicationFactoryMock);
     }
 
@@ -58,10 +58,10 @@ class ContentfulContentCollectionTypePluginTest extends Unit
     public function testBuildFormSuccess()
     {
         $this->communicationFactoryMock->expects($this->once())
-            ->method('createContentfulContentCollectionType')
-            ->willReturn($this->categoryContentTypeTypeMock);
+            ->method('createContentfulCollectionBetweenListingType')
+            ->willReturn($this->contentfulCollectionBetweenListingType);
 
-        $this->categoryContentTypeTypeMock->expects($this->once())
+        $this->contentfulCollectionBetweenListingType->expects($this->once())
             ->method('buildForm')
             ->with($this->formBuilderMock, []);
 

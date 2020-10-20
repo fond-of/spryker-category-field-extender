@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class CategoryContentTypeFormPlugin extends AbstractPlugin implements CategoryFormPluginInterface
+class ContentfulCollectionAfterListingTypePlugin extends AbstractPlugin implements CategoryFormPluginInterface
 {
     /**
      * Specification:
@@ -24,7 +24,7 @@ class CategoryContentTypeFormPlugin extends AbstractPlugin implements CategoryFo
     public function buildForm(FormBuilderInterface $builder): void
     {
         $formType = $this->getFactory()
-            ->createCategoryContentTypeType();
+            ->createContentfulCollectionAfterListingType();
 
         $formType->buildForm($builder, []);
     }

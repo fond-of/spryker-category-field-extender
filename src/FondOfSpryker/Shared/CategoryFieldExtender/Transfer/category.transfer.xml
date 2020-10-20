@@ -8,6 +8,9 @@
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
         <property name="contentfulContentCollection" type="string"/>
+        <property name="contentfulCollectionBeforeListing" type="string"/>
+        <property name="contentfulCollectionBetweenListing" type="string"/>
+        <property name="contentfulCollectionAfterListing" type="string"/>
     </transfer>
 
     <transfer name="CategoryNodeStorage">
@@ -16,6 +19,9 @@
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
         <property name="contentfulContentCollection" type="string"/>
+        <property name="contentfulCollectionBeforeListing" type="string"/>
+        <property name="contentfulCollectionBetweenListing" type="string"/>
+        <property name="contentfulCollectionAfterListing" type="string"/>
     </transfer>
 
     <transfer name="CategoryLocalizedAttributes">

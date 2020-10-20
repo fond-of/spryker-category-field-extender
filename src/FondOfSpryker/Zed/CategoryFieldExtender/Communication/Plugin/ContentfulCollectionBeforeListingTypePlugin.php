@@ -9,7 +9,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class AltTitleTypeFormPlugin extends AbstractPlugin implements CategoryFormPluginInterface
+class ContentfulCollectionBeforeListingTypePlugin extends AbstractPlugin implements CategoryFormPluginInterface
 {
     /**
      * Specification:
@@ -24,7 +24,7 @@ class AltTitleTypeFormPlugin extends AbstractPlugin implements CategoryFormPlugi
     public function buildForm(FormBuilderInterface $builder): void
     {
         $formType = $this->getFactory()
-            ->createAltTitle();
+            ->createContentfulCollectionBeforeListingType();
 
         $formType->buildForm($builder, []);
     }

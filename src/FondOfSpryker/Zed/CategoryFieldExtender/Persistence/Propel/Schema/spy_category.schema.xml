@@ -11,6 +11,10 @@
         <column name="contentful_hero" required="false" type="VARCHAR" size="255"/>
         <column name="contentful_filter" required="false" type="VARCHAR" size="255"/>
         <column name="contentful_content_collection" required="false" type="VARCHAR" size="255"/>
+
+        <column name="contentful_collection_before_listing" required="false" type="VARCHAR" size="255"/>
+        <column name="contentful_collection_between_listing" required="false" type="VARCHAR" size="255"/>
+        <column name="contentful_collection_after_listing" required="false" type="VARCHAR" size="255"/>
     </table>
 
     <table name="spy_category_attribute" idMethod="native">

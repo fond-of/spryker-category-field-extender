@@ -15,7 +15,7 @@ class CategoryContentTypeFormPluginTest extends Unit
     protected $communicationFactoryMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\CategoryContentTypeFormPlugin
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\CategoryContentTypePlugin
      */
     protected $plugin;
 
@@ -48,7 +48,7 @@ class CategoryContentTypeFormPluginTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->plugin = new CategoryContentTypeFormPlugin();
+        $this->plugin = new CategoryContentTypePlugin();
         $this->plugin->setFactory($this->communicationFactoryMock);
     }
 

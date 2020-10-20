@@ -15,7 +15,7 @@ class AltTitleTypeFormPluginTest extends Unit
     protected $communicationFactoryMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\AltTitleTypeFormPlugin
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\AltTitleTypePlugin
      */
     protected $plugin;
 
@@ -48,7 +48,7 @@ class AltTitleTypeFormPluginTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->plugin = new AltTitleTypeFormPlugin();
+        $this->plugin = new AltTitleTypePlugin();
         $this->plugin->setFactory($this->communicationFactoryMock);
     }
 
@@ -58,7 +58,7 @@ class AltTitleTypeFormPluginTest extends Unit
     public function testBuildFormSuccess()
     {
         $this->communicationFactoryMock->expects($this->once())
-            ->method('createAltTitle')
+            ->method('createAltTitleType')
             ->willReturn($this->categoryAltTypeMock);
 
         $this->categoryAltTypeMock->expects($this->once())

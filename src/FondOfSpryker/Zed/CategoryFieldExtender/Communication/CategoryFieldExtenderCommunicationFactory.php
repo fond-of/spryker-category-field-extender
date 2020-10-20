@@ -4,6 +4,9 @@ namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication;
 
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\AltTitleType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTypeType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionAfterListingType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBeforeListingType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBetweenListingType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulContentCollectionType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulFilterType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulHeroType;
@@ -48,16 +51,40 @@ class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFac
     /**
      * @return \Symfony\Component\Form\AbstractType
      */
-    public function createAltTitle(): AbstractType
+    public function createAltTitleType(): AbstractType
     {
         return new AltTitleType();
     }
 
     /**
-     * @return AbstractType
+     * @return \Symfony\Component\Form\AbstractType
      */
     public function createLocalizedAttributesCollectionType(): AbstractType
     {
         return new LocalizedAttributesCollectionType();
+    }
+
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createContentfulCollectionBeforeListingType(): AbstractType
+    {
+        return new ContentfulCollectionBeforeListingType();
+    }
+
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createContentfulCollectionAfterListingType(): AbstractType
+    {
+        return new ContentfulCollectionAfterListingType();
+    }
+
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createContentfulCollectionBetweenListingType(): AbstractType
+    {
+        return new ContentfulCollectionBetweenListingType();
     }
 }
