@@ -4,6 +4,7 @@
     xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
     <transfer name="Category">
+        <property name="pageType" type="string"/>
         <property name="contentType" type="string"/>
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
@@ -15,6 +16,7 @@
 
     <transfer name="CategoryNodeStorage">
         <property name="altTitle" type="string" />
+        <property name="pageType" type="string" />
         <property name="contentType" type="string" />
         <property name="contentfulHero" type="string"/>
         <property name="contentfulFilter" type="string"/>
