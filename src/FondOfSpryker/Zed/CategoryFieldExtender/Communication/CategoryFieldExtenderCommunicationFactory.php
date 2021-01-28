@@ -11,11 +11,20 @@ use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulContent
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulFilterType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulHeroType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\LocalizedAttributesCollectionType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\PageType;
 use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 use Symfony\Component\Form\AbstractType;
 
 class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFactory
 {
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createPageType(): AbstractType
+    {
+        return new PageType();
+    }
+
     /**
      * @return \Symfony\Component\Form\AbstractType
      */
