@@ -9,9 +9,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 /**
  * @method \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory getFactory()
  */
-class PageType extends AbstractType
+class BodyClassType extends AbstractType
 {
-    public const FIELD_PAGE_TYPE = 'page_type';
+    public const FIELD_BODY_CLASS = 'body_class';
 
     /**
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
@@ -21,7 +21,7 @@ class PageType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $this->addPageType($builder, $options);
+        $this->addBodyClassType($builder, $options);
     }
 
     /**
@@ -30,9 +30,9 @@ class PageType extends AbstractType
      *
      * @return $this
      */
-    protected function addPageType(FormBuilderInterface $builder, array $options)
+    protected function addBodyClassType(FormBuilderInterface $builder, array $options)
     {
-        $builder->add(static::FIELD_PAGE_TYPE, TextType::class, [
+        $builder->add(static::FIELD_BODY_CLASS, TextType::class, [
             'required' => false,
         ]);
 
