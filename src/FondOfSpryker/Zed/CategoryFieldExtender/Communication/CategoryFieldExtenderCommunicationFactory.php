@@ -3,6 +3,7 @@
 namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication;
 
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\AltTitleType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\BodyClassType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\CategoryContentTypeType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionAfterListingType;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBeforeListingType;
@@ -23,6 +24,14 @@ class CategoryFieldExtenderCommunicationFactory extends AbstractCommunicationFac
     public function createPageType(): AbstractType
     {
         return new PageType();
+    }
+
+    /**
+     * @return \Symfony\Component\Form\AbstractType
+     */
+    public function createBodyClassType(): AbstractType
+    {
+        return new BodyClassType();
     }
 
     /**

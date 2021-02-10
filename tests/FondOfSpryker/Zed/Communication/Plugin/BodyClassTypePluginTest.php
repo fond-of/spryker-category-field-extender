@@ -4,10 +4,10 @@ namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin;
 
 use Codeception\Test\Unit;
 use FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory;
-use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBeforeListingType;
+use FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\BodyClassType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ContentfulCollectionBeforeListingPluginTest extends Unit
+class BodyClassTypePluginTest extends Unit
 {
     /**
      * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\CategoryFieldExtenderCommunicationFactory|\PHPUnit\Framework\MockObject\MockObject
@@ -15,7 +15,7 @@ class ContentfulCollectionBeforeListingPluginTest extends Unit
     protected $communicationFactoryMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\ContentfulCollectionBeforeListingTypePlugin
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin\AltTitleTypePlugin
      */
     protected $plugin;
 
@@ -25,9 +25,9 @@ class ContentfulCollectionBeforeListingPluginTest extends Unit
     protected $formBuilderMock;
 
     /**
-     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\ContentfulCollectionBeforeListingType|\PHPUnit\Framework\MockObject\MockObject
+     * @var \FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form\BodyClassType|\PHPUnit\Framework\MockObject\MockObject
      */
-    protected $contentfulCollectionBeforeListingType;
+    protected $bodyClassTypeMock;
 
     /**
      * @return void
@@ -44,11 +44,11 @@ class ContentfulCollectionBeforeListingPluginTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->contentfulCollectionBeforeListingType = $this->getMockBuilder(ContentfulCollectionBeforeListingType::class)
+        $this->bodyClassTypeMock = $this->getMockBuilder(BodyClassType::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->plugin = new ContentfulCollectionBeforeListingTypePlugin();
+        $this->plugin = new BodyClassTypePlugin();
         $this->plugin->setFactory($this->communicationFactoryMock);
     }
 
@@ -58,10 +58,10 @@ class ContentfulCollectionBeforeListingPluginTest extends Unit
     public function testBuildFormSuccess()
     {
         $this->communicationFactoryMock->expects($this->once())
-            ->method('createContentfulCollectionBeforeListingType')
-            ->willReturn($this->contentfulCollectionBeforeListingType);
+            ->method('createBodyClassType')
+            ->willReturn($this->bodyClassTypeMock);
 
-        $this->contentfulCollectionBeforeListingType->expects($this->once())
+        $this->bodyClassTypeMock->expects($this->once())
             ->method('buildForm')
             ->with($this->formBuilderMock, []);
 

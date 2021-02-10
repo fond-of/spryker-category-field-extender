@@ -5,7 +5,7 @@ namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Form;
 use Codeception\Test\Unit;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class PageTypeTest extends Unit
+class ContentfulHeroTypeTest extends Unit
 {
     /**
      * @var \Symfony\Component\Form\FormBuilder|\PHPUnit\Framework\MockObject\MockObject
@@ -28,7 +28,7 @@ class PageTypeTest extends Unit
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->type = new PageType();
+        $this->type = new ContentfulHeroType();
     }
 
     /**
