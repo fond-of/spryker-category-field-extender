@@ -2,7 +2,7 @@
 
 namespace FondOfSpryker\Zed\CategoryFieldExtender\Communication\Plugin;
 
-use Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryFormPluginInterface;
+use Spryker\Zed\CategoryGuiExtension\Dependency\Plugin\CategoryFormPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Symfony\Component\Form\FormBuilderInterface;
 
